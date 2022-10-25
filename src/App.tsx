@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import Header from "./header/Header";
-import Main from "./main/Main";
-import Skills from "./skills/Skills";
+import {Navbar} from "./components/navbar/Navbar";
+import {HashRouter} from "react-router-dom";
 
 function App() {
     return (
-        <div className="App">
-            <Header/>
-            <Main/>
-            <Skills/>
-        </div>
+        <HashRouter>
+            <div className="App">
+                <Navbar/>
+            </div>
+        </HashRouter>
+
     );
 }
 
