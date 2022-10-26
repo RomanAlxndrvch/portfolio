@@ -6,6 +6,7 @@ import PersonPinIcon from '@mui/icons-material/PersonPin';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import DraftsIcon from '@mui/icons-material/Drafts';
 
+
 export const Navbar = () => {
 
 
@@ -15,18 +16,29 @@ export const Navbar = () => {
                 <div className={classes.navbarContainer}>
                     <span className={classes.navTopWord}>WELCOME</span>
                     <nav className={classes.nav}>
-                        <NavLink className={classes.link} to={'/home'}>
+
+                        <NavLink
+                            className={({isActive}) =>
+                                (isActive ? classes.active : ' ')}
+                            to={'/home'}>
                             <CottageIcon style={{color: 'black'}} fontSize={"small"}/> Home
                         </NavLink>
-                        <NavLink className={classes.link} to={'/about'}>
+
+                        <NavLink className={({isActive}) =>
+                            (isActive ? classes.active : ' ')} to={'/about'}>
                             <PersonPinIcon style={{color: 'black'}} fontSize={"small"}/> About
                         </NavLink>
-                        <NavLink className={classes.link} to={'/Projects'}>
+
+                        <NavLink className={({isActive}) =>
+                            (isActive ? classes.active : ' ')} to={'/projects'}>
                             <BusinessCenterIcon style={{color: 'black'}} fontSize={"small"}/> Projects
                         </NavLink>
-                        <NavLink className={classes.link} to={'/contacts'}>
+
+                        <NavLink className={({isActive}) =>
+                            (isActive ? classes.active : ' ')} to={'/contacts'}>
                             <DraftsIcon style={{color: 'black'}} fontSize={"small"}/> Contacts
                         </NavLink>
+
                     </nav>
                     <div className={classes.createInfo}>
                         <a className={classes.link} style={{opacity: '0.7', fontStyle: 'italic'}}

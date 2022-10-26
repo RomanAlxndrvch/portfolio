@@ -1,0 +1,4 @@
+.contentContainer {
+    width: calc(100% - 450px);
+    background-color: #F8F8F8;
+}
