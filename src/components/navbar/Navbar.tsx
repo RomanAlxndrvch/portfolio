@@ -8,8 +8,6 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 
 
 export const Navbar = () => {
-
-
     return (
         <div>
             <aside className={classes.navbar}>
