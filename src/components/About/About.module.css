@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+.aboutContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img {
+    margin-top: 100px;
+    width: 950px;
+    filter: grayscale(70%);
+}
+
+.infoContainer {
+    width: 950px;
+    display: flex;
+
+}
+
+.aboutMe {
+    flex: 1;
+}
+
+.shortInfo {
+    flex: 1;
+}
+
+
+.infoName {
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: .5px;
+    color: #000;
+}
+
+.infoContent {
+    font-family: 'Mulish';
+    font-weight: 400;
+    color: #767676;
+    min-width: 90px;
+}
+
+h3 {
+    font-family: "Montserrat";
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+table tbody tr td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+table tbody tr td:nth-child(2):before {
+    content: "";
+    display: inline-block;
+    padding-left: 10px;
+    margin-right: 10px;
+}
