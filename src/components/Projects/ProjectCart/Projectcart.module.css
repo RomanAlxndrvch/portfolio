@@ -1,0 +1,24 @@
+.projectCardContainer {
+    width: 420px;
+    height: 250px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.img {
+    width: 420px;
+    height: 250px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.img:hover {
+    height: 100%;
+    transform: scale(1.25);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    filter: blur(3px) brightness(80%);
+    transition: all 0.5s;
+}
