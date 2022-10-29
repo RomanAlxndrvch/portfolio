@@ -1,4 +1,6 @@
 .contentContainer {
+    float: right;
     width: calc(100% - 450px);
+    height: max-content;
     background-color: #F8F8F8;
 }

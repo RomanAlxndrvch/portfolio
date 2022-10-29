@@ -16,6 +16,9 @@ export const About = () => {
             <section className={classes.infoContainer}>
                 <div className={classes.aboutMe}>
                     <h3>Roman Troian & Front-end developer</h3>
+                    <p className={classes.infoContent}>I’m a Front-End Developer located in Canada,AB.
+                        Well-organised person, problem solver,employee with high attention to detail. Fan of computer games, outdoor,movies and technologies. A family person and father of son,
+                        Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
                 </div>
                 <div className={classes.shortInfo}>
                     <table cellPadding="0" cellSpacing="0">

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@1000&display=swap');
 
 .navbar {
+    position: fixed;
     height: 100vh;
     width: 450px;
     background-color: #fff;
