@@ -1,24 +1,35 @@
 .projectCardContainer {
-    width: 420px;
-    height: 250px;
+    position: relative;
+    width: 550px;
+    height: 300px;
     overflow: hidden;
     transition: all 0.5s;
+}
+
+.btnContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 30px;
 }
 
 .img {
-    width: 420px;
-    height: 250px;
+    width: 550px;
+    height: 300px;
     float: left;
     position: relative;
     overflow: hidden;
+    filter: grayscale(70%);
     transition: all 0.5s;
 }
 
-.img:hover {
+.imgHover {
     height: 100%;
     transform: scale(1.25);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    filter: blur(3px) brightness(80%);
+    filter: blur(3px) brightness(80%) grayscale(70%);
     transition: all 0.5s;
 }

@@ -30,8 +30,8 @@ export const About = () => {
                 <div className={classes.shortInfo}>
                     <table cellPadding="0" cellSpacing="0">
                         <tbody>
-                        {shortInfoContent.map(el => {
-                            return <tr>
+                        {shortInfoContent.map((el, index) => {
+                            return <tr key={index}>
                                 <td className={classes.infoName}>{el.info}</td>
                                 <td>{el.content}</td>
                             </tr>

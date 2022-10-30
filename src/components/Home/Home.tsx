@@ -45,11 +45,11 @@ export const Home = () => {
                         technology
                     </p>
                     <div className={classes.iconContainer}>
-                        {homeLinks.map(el => <Icon
-                            icon={el.icon}
-                            link={el.link}
-                            styles={el.styles}
-                            scale={el.scale}
+                        {homeLinks.map((el, index) => <Icon key={index}
+                                                            icon={el.icon}
+                                                            link={el.link}
+                                                            styles={el.styles}
+                                                            scale={el.scale}
                         />)}
                     </div>
 

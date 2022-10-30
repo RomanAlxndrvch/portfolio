@@ -11,3 +11,9 @@
     width: 900px;
 }
 
+.projectCart {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
