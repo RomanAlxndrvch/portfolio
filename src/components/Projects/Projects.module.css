@@ -1,9 +1,11 @@
 .projectContainer {
-    height: 100vh;
+    height: min-content;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
 }
 
 .mainContainer {
@@ -11,9 +13,29 @@
     width: 900px;
 }
 
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+}
+
 .projectCart {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
+    align-items: center;
+}
+
+.projectName {
+    line-height: 1.2;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #767676;
+    border-radius: 20px;
+    text-align: center;
 }
 

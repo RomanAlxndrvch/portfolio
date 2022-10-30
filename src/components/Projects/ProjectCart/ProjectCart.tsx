@@ -4,7 +4,7 @@ import {Button} from "@mui/material";
 
 
 type projectCartPropsType = {
-    url: string
+    url: string | boolean
     gitHubLink: string
     picture: string
 }
@@ -30,10 +30,12 @@ export const ProjectCart = (props: projectCartPropsType) => {
             <div style={{zIndex: onHover ? 10 : 0}}
                  className={classes.btnContainer}>
 
-                <a href={props.url} style={{textDecoration: 'none'}} target={'_blank'}>
+                {props.url ? <a href={typeof props.url === "string" ? props.url : ''} style={{textDecoration: 'none'}}
+                                target={'_blank'}>
                     <Button size={"large"} onMouseOver={onHoverOn} onMouseLeave={onHoverOff} variant={"contained"}
                             sx={buttonStyle}>Link</Button>
-                </a>
+                </a> : ''}
+
 
                 <a href={props.gitHubLink} style={{textDecoration: 'none'}} target={'_blank'}>
                     <Button size={"large"} onMouseOver={onHoverOn} onMouseLeave={onHoverOff} variant={"contained"}
