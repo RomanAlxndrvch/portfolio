@@ -23,11 +23,12 @@ h3 {
     color: #000;
     font-weight: 700;
     font-size: 22px;
+    margin-left: 28px;
 
 }
 
 h6 {
-    width: min-content;
+    width: max-content;
     display: inline-block;
     background-color: rgba(0, 0, 0, .04);
     text-transform: uppercase;

@@ -42,7 +42,7 @@ export const Projects = () => {
                                                                                                       picture={el.picture}/>
                         <span style={{
                             height: 'min-content',
-                            width: '30%',
+                            width: '32%',
                             order: index % 2 === 0 ? '2' : '0'
                         }}><div className={classes.projectName}>{el.name}</div>
                             {el.text}</span>
