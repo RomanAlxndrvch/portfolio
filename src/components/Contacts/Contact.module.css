@@ -1,0 +1,25 @@
+.contactsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contactText {
+    font-size: 18px;
+}
+
+.contactLink {
+    text-decoration: none;
+    background-color: #767676;
+    color: white;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+}
+
+.formContainer {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

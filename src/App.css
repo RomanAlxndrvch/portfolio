@@ -23,4 +23,20 @@ h3 {
     color: #000;
     font-weight: 700;
     font-size: 22px;
+
+}
+
+h6 {
+    width: min-content;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .04);
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    font-family: "Montserrat";
+    letter-spacing: 0;
+    margin-bottom: 15px;
+    /*margin-left: 28px;*/
 }
