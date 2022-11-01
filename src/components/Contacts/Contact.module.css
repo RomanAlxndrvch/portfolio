@@ -23,3 +23,10 @@
     flex-direction: column;
     gap: 30px;
 }
+
+.alert {
+    position: fixed;
+    top: 10%;
+    margin: auto;
+    transition: all 500ms;
+}
