@@ -2,11 +2,12 @@
 
 .aboutContainer {
     width: 100%;
-    height: max-content;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     animation: moveInLeft 1.2s ease;
+    background-color: #F8F8F8;
 }
 
 .img {
