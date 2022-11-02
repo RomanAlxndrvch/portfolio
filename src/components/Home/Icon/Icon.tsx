@@ -1,8 +1,10 @@
 import React, {useState} from "react";
+import {NavLink} from "react-router-dom";
 
 type IconPropsType = {
     icon: string
     link: string
+    linkStyle: string
     styles?: {}
     scale?: number
 }
@@ -25,11 +27,17 @@ export const Icon = (props: IconPropsType) => {
     }
 
     return (
-        <a href={props.link} target={'_blank'} onMouseOver={hoverTrue} onMouseLeave={hoverFalse}>
-            <svg style={IconStyle}>
-                <path
-                    d={props.icon}/>
-            </svg>
-        </a>
+        props.linkStyle === 'link' ?
+            <a href={props.link} target={'_blank'} onMouseOver={hoverTrue} onMouseLeave={hoverFalse}>
+                <svg style={IconStyle}>
+                    <path
+                        d={props.icon}/>
+                </svg>
+            </a> : <NavLink to={props.link}>
+                <svg style={IconStyle}>
+                    <path
+                        d={props.icon}/>
+                </svg>
+            </NavLink>
     )
 }

@@ -87,7 +87,7 @@ export const Contacts = () => {
                 <h6> CONTACTS</h6>
                 <p className={classes.contactText}>Everyone always can contact me through my <a
                     className={classes.contactLink} href="https://www.linkedin.com/in/romantroian/"
-                    target={'_blank'}> LinkedIn </a>,or send me
+                    target={'_blank'}>LinkedIn</a> ,or send me
                     email via this form : </p>
 
                 <form className={classes.formContainer} ref={form} onSubmit={sendEmail}>
