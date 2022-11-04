@@ -35,3 +35,10 @@
     filter: blur(3px) brightness(80%) grayscale(70%);
     transition: all 0.5s;
 }
+
+
+@media only screen and (max-width: 1300px) {
+    .projectCardContainer {
+        width: 500px;
+    }
+}

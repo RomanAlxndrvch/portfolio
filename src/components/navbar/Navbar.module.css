@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 6;
 }
 
 .navbarContainer {
@@ -61,4 +62,10 @@
     color: #767676;
     outline: none;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 1600px) {
+    .navbar {
+        width: 350px;
+    }
 }

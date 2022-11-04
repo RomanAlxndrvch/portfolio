@@ -4,3 +4,18 @@
     height: max-content;
     background-color: #F8F8F8;
 }
+
+@media screen and (max-width: 1600px ) {
+    .contentContainer {
+        width: calc(100% - 350px);
+    }
+}
+
+
+@media screen and (max-width: 1500px ) {
+    .contentContainer {
+        display: flex;
+        justify-content: center;
+    }
+}
+

@@ -8,6 +8,7 @@
     flex-direction: column;
     animation: moveInLeft 1.2s ease;
     background-color: #F8F8F8;
+    margin-bottom: 100px;
 }
 
 .img {
@@ -65,5 +66,16 @@ table tbody tr td:nth-child(2):before {
     100% {
         opacity: 1;
         transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 1350px ) {
+    .img {
+        width: 800px;
+    }
+
+    .infoContainer {
+        width: 800px;
+        gap: 30px;
     }
 }

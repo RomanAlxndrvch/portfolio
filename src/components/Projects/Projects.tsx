@@ -34,7 +34,7 @@ export const Projects = () => {
     return (
         <section className={classes.projectContainer}>
             <div className={classes.mainContainer}>
-                <h6>Creative Portfolio</h6>
+                <h6 className={classes.h6}>Creative Portfolio</h6>
                 <div className={classes.cartContainer}>
                     {projectInfo.map((el, index) => <div className={classes.projectCart}><ProjectCart key={index}
                                                                                                       url={el.url}
