@@ -33,11 +33,12 @@ export const Icon = (props: IconPropsType) => {
                     <path
                         d={props.icon}/>
                 </svg>
-            </a> : <NavLink to={props.link}>
+            </a> : <NavLink to={props.link} onMouseOver={hoverTrue} onMouseLeave={hoverFalse}>
                 <svg style={IconStyle}>
                     <path
                         d={props.icon}/>
                 </svg>
             </NavLink>
     )
+
 }
