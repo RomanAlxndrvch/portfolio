@@ -6,8 +6,11 @@ import PersonPinIcon from '@mui/icons-material/PersonPin';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import DraftsIcon from '@mui/icons-material/Drafts';
 
+type NavbarPropsType = {
+    isMenuOpen: boolean
+}
 
-export const Navbar = () => {
+export const Navbar = (props: NavbarPropsType) => {
     return (
         <div>
             <aside className={classes.navbar}>

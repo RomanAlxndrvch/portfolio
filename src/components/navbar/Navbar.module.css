@@ -72,6 +72,6 @@
 
 @media only screen and (max-width: 1300px) {
     .navbar {
-        display: none;
+        left: -100%;
     }
 }

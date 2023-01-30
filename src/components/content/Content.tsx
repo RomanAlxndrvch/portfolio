@@ -12,7 +12,6 @@ export const Content = () => {
         <div className={classes.contentContainer}>
             <Routes>
                 <Route path={'/'} element={<Navigate to={'/home'}/>}/>
-
                 <Route path={'/home'} element={<Home/>}/>
                 <Route path={'/about'} element={<About/>}/>
                 <Route path={'/projects'} element={<Projects/>}/>

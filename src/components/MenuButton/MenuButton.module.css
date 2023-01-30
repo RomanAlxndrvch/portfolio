@@ -1,4 +1,4 @@
-.header {
+.button {
     width: 15px;
     height: 15px;
     position: fixed;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (min-width: 1300px ) {
-    .header {
+    .button {
         display: none;
     }
 }
