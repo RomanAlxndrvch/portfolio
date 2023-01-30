@@ -19,3 +19,12 @@
     }
 }
 
+
+@media screen and (max-width: 1300px ) {
+    .contentContainer {
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

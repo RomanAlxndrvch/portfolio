@@ -3,6 +3,7 @@ import './App.css';
 import {Navbar} from "./components/navbar/Navbar";
 import {HashRouter} from "react-router-dom";
 import {Content} from "./components/content/Content";
+import {Header} from "./components/Header/Header";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <div className="App">
                 <Navbar/>
                 <Content/>
+                <Header/>
             </div>
         </HashRouter>
 
