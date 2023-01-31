@@ -10,6 +10,16 @@
     justify-content: center;
     align-items: center;
     z-index: 6;
+    transition: 450ms;
+}
+
+.close {
+    animation: moveInLeft 0.8s ease;
+    visibility: hidden;
+}
+
+.open {
+    animation: moveInRight 0.8s ease;
 }
 
 .navbarContainer {
@@ -64,14 +74,36 @@
     text-decoration: none;
 }
 
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes moveInRight {
+    0% {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
 @media only screen and (max-width: 1600px) {
     .navbar {
         width: 350px;
     }
 }
 
-@media only screen and (max-width: 1300px) {
-    .navbar {
-        left: -100%;
-    }
-}

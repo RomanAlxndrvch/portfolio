@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import classes from './Navbar.module.css'
 import {NavLink} from "react-router-dom";
 import CottageIcon from '@mui/icons-material/Cottage';
@@ -8,12 +8,34 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 
 type NavbarPropsType = {
     isMenuOpen: boolean
+    changeMenuStatus: (e: boolean) => void
 }
 
 export const Navbar = (props: NavbarPropsType) => {
+
+    //Open and close menu for mobile and desktop version auto
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+        window.addEventListener('resize', handleWindowResize);
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    });
+    useEffect(() => {
+        if (windowWidth < 1300) props.changeMenuStatus(false)
+    }, [windowWidth])
+    if (windowWidth > 1300) props.changeMenuStatus(true)
+    ////////////
+
     return (
         <div>
-            <aside className={classes.navbar}>
+            <aside
+                className={props.isMenuOpen ?
+                    classes.navbar + ' ' + classes.open :
+                    classes.navbar + ' ' + classes.close}>
                 <div className={classes.navbarContainer}>
                     <span className={classes.navTopWord}>WELCOME</span>
                     <nav className={classes.nav}>
