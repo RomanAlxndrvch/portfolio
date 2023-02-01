@@ -9,13 +9,15 @@ function App() {
 
     //For open and close MenuButton when screen smaller 1300px
     const [isMenuOpen, setIsMenuOpen] = useState(true)
-    
+    const [menuBtnPressed, setMenuBtnPressed] = useState(false)
+
     return (
         <HashRouter>
             <div className="App">
-                <Navbar isMenuOpen={isMenuOpen} changeMenuStatus={setIsMenuOpen}/>
-                <Content/>
-                <MenuButton isMenuOpen={isMenuOpen} changeMenuStatus={setIsMenuOpen}/>
+                <Navbar isMenuOpen={isMenuOpen} changeMenuStatus={setIsMenuOpen} menuBtnPressed={setMenuBtnPressed}/>
+                <Content menuBtnPressed={menuBtnPressed}/>
+                <MenuButton isMenuOpen={isMenuOpen} changeMenuStatus={setIsMenuOpen}
+                            menuBtnPressed={setMenuBtnPressed}/>
             </div>
         </HashRouter>
 

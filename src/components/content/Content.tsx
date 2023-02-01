@@ -6,10 +6,14 @@ import {About} from "../About/About";
 import {Contacts} from "../Contacts/Contacts";
 import {Projects} from "../Projects/Projects";
 
+type ContentPropsType = {
+    menuBtnPressed: boolean
+}
 
-export const Content = () => {
+export const Content = (props: ContentPropsType) => {
     return (
-        <div className={classes.contentContainer}>
+        <div
+            className={props.menuBtnPressed ? classes.contentContainer + ' ' + classes.darkBackground : classes.contentContainer}>
             <Routes>
                 <Route path={'/'} element={<Navigate to={'/home'}/>}/>
                 <Route path={'/home'} element={<Home/>}/>

@@ -27,7 +27,7 @@ export const Projects = () => {
             gitHubLink: 'https://github.com/RomanAlxndrvch/Counter2',
             picture: myProject,
             name: 'Counter',
-            text: 'My very first project. Here I still test the new library and features. A nice small app to see how some things work :)'
+            text: 'My very first project. Here I still test the new library and features. A nice small app to see how some things works :)'
         },
 
     ]

@@ -9,6 +9,7 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 type NavbarPropsType = {
     isMenuOpen: boolean
     changeMenuStatus: (e: boolean) => void
+    menuBtnPressed: (e: boolean) => void
 }
 
 export const Navbar = (props: NavbarPropsType) => {
@@ -25,10 +26,22 @@ export const Navbar = (props: NavbarPropsType) => {
         };
     });
     useEffect(() => {
-        if (windowWidth < 1300) props.changeMenuStatus(false)
+        if (windowWidth < 1300) {
+            props.changeMenuStatus(false)
+            props.menuBtnPressed(false)
+        }
     }, [windowWidth])
     if (windowWidth > 1300) props.changeMenuStatus(true)
-    ////////////
+
+
+    //Close menu after click on menu
+    const navLinkClickHandler = () => {
+        if (windowWidth < 1300) {
+            props.changeMenuStatus(false)
+            props.menuBtnPressed(false)
+        }
+    }
+
 
     return (
         <div>
@@ -41,24 +54,31 @@ export const Navbar = (props: NavbarPropsType) => {
                     <nav className={classes.nav}>
 
                         <NavLink
+                            onClick={navLinkClickHandler}
                             className={({isActive}) =>
                                 (isActive ? classes.active : ' ')}
                             to={'/home'}>
                             <CottageIcon style={{color: 'black'}} fontSize={"small"}/> Home
                         </NavLink>
 
-                        <NavLink className={({isActive}) =>
-                            (isActive ? classes.active : ' ')} to={'/about'}>
+                        <NavLink
+                            onClick={navLinkClickHandler}
+                            className={({isActive}) =>
+                                (isActive ? classes.active : ' ')} to={'/about'}>
                             <PersonPinIcon style={{color: 'black'}} fontSize={"small"}/> About
                         </NavLink>
 
-                        <NavLink className={({isActive}) =>
-                            (isActive ? classes.active : ' ')} to={'/projects'}>
+                        <NavLink
+                            onClick={navLinkClickHandler}
+                            className={({isActive}) =>
+                                (isActive ? classes.active : ' ')} to={'/projects'}>
                             <BusinessCenterIcon style={{color: 'black'}} fontSize={"small"}/> Projects
                         </NavLink>
 
-                        <NavLink className={({isActive}) =>
-                            (isActive ? classes.active : ' ')} to={'/contacts'}>
+                        <NavLink
+                            onClick={navLinkClickHandler}
+                            className={({isActive}) =>
+                                (isActive ? classes.active : ' ')} to={'/contacts'}>
                             <DraftsIcon style={{color: 'black'}} fontSize={"small"}/> Contacts
                         </NavLink>
 

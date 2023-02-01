@@ -5,6 +5,12 @@
     background-color: #F8F8F8;
 }
 
+.darkBackground {
+    filter: brightness(50%);
+    width: 100vw;
+}
+
+
 @media screen and (max-width: 1600px ) {
     .contentContainer {
         width: calc(100% - 350px);

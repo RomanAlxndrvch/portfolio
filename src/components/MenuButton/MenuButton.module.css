@@ -1,10 +1,54 @@
 .button {
-    width: 15px;
-    height: 15px;
+    height: 65px;
+    width: 65px;
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: black;
+    border-radius: 100%;
+    background-color: #333333;
+    text-align: center;
+}
+
+.navCheckbox {
+    display: none;
+}
+
+.navigationIcon {
+    width: 30px;
+    height: 2px;
+    background-color: #F8F8F8;
+    display: inline-block;
+    position: relative;
+    margin-top: 30px;
+    transition: all 0.2s;
+}
+
+.navigationIcon::before {
+    width: 30px;
+    height: 2px;
+    background-color: #F8F8F8;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    transition: all 0.2s;
+}
+
+.navigationIcon::after {
+    width: 30px;
+    height: 2px;
+    background-color: #F8F8F8;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    transition: all 0.2s;
+}
+
+.navCheckbox:checked + .navBtn .navigationIcon {
+    background-color: transparent;
 }
 
 @media screen and (min-width: 1300px ) {
@@ -12,3 +56,5 @@
         display: none;
     }
 }
+
+
