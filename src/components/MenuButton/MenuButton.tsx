@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from './MenuButton.module.css'
 
 
@@ -10,27 +10,41 @@ type MenuButtonPropsType = {
 
 export const MenuButton = (props: MenuButtonPropsType) => {
 
+    const [buttonItems, setButtonItems] = useState(classes.buttonItems + ' ' + classes.unclicked)
+
+    const updateButton = () => {
+        if (!props.isMenuOpen) setButtonItems(classes.buttonItems + ' ' + classes.clicked)
+        else setButtonItems(classes.buttonItems + ' ' + classes.unclicked)
+    }
+
     const openMenuHandler = () => {
-        console.log('1')
         props.changeMenuStatus(true)
         props.menuBtnPressed(true)
+        updateButton()
     }
 
     const closeMenuHandler = () => {
-        console.log('2')
         props.changeMenuStatus(false)
         props.menuBtnPressed(false)
+        updateButton()
     }
 
 
     return (
         <div className={classes.button} onClick={props.isMenuOpen ? closeMenuHandler : openMenuHandler}>
-            {/*{<input type="checkbox" className={classes.navCheckbox} id='toggle'
-                    onClick={props.isMenuOpen ? closeMenuHandler : openMenuHandler}/>}*/}
+            {/*  {<input type="checkbox" className={classes.navCheckbox} id='toggle'
+                    onClick={props.isMenuOpen ? closeMenuHandler : openMenuHandler}/>}
             <label htmlFor='toggle' className={classes.navBtn}>
                 <span
                     className={classes.navigationIcon}>&nbsp;</span>
-            </label>
+            </label>*/}
+            <nav>
+                <div className={classes.menuButton}>
+                    <div className={buttonItems}></div>
+                    <div className={buttonItems}></div>
+                    <div className={buttonItems}></div>
+                </div>
+            </nav>
         </div>
     )
 }
