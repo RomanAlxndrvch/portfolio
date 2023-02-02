@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import classes from './MenuButton.module.css'
 
 
@@ -16,6 +16,10 @@ export const MenuButton = (props: MenuButtonPropsType) => {
         if (!props.isMenuOpen) setButtonItems(classes.buttonItems + ' ' + classes.clicked)
         else setButtonItems(classes.buttonItems + ' ' + classes.unclicked)
     }
+
+    useEffect(() => {
+        !props.isMenuOpen && setButtonItems(classes.buttonItems + ' ' + classes.unclicked)
+    }, [props.isMenuOpen])
 
     const openMenuHandler = () => {
         props.changeMenuStatus(true)
