@@ -36,12 +36,6 @@ export const MenuButton = (props: MenuButtonPropsType) => {
 
     return (
         <div className={classes.button} onClick={props.isMenuOpen ? closeMenuHandler : openMenuHandler}>
-            {/*  {<input type="checkbox" className={classes.navCheckbox} id='toggle'
-                    onClick={props.isMenuOpen ? closeMenuHandler : openMenuHandler}/>}
-            <label htmlFor='toggle' className={classes.navBtn}>
-                <span
-                    className={classes.navigationIcon}>&nbsp;</span>
-            </label>*/}
             <nav>
                 <div className={classes.menuButton}>
                     <div className={buttonItems}></div>

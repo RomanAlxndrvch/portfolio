@@ -114,3 +114,27 @@
         width: 401px;
     }
 }
+
+@media only screen and (max-width: 830px) {
+    .imgAndInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .iconContainer {
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .text {
+        text-align: center;
+    }
+}

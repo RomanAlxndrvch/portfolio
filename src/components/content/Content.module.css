@@ -8,6 +8,7 @@
 .darkBackground {
     filter: brightness(50%);
     width: 100vw;
+    height: max-content;
 }
 
 
