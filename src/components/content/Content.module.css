@@ -7,7 +7,7 @@
 
 .darkBackground {
     filter: brightness(50%);
-    width: 100vw;
+    width: max-content;
     height: max-content;
 }
 
@@ -30,8 +30,9 @@
 @media screen and (max-width: 1300px ) {
     .contentContainer {
         float: none;
-        width: 100%;
+        width: min-content;
         display: flex;
         justify-content: center;
+
     }
 }

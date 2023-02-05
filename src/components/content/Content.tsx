@@ -7,6 +7,7 @@ import {Contacts} from "../Contacts/Contacts";
 import {Projects} from "../Projects/Projects";
 
 type ContentPropsType = {
+    windowWidth: number
     menuBtnPressed: boolean
 }
 
@@ -18,7 +19,7 @@ export const Content = (props: ContentPropsType) => {
                 <Route path={'/'} element={<Navigate to={'/home'}/>}/>
                 <Route path={'/home'} element={<Home/>}/>
                 <Route path={'/about'} element={<About/>}/>
-                <Route path={'/projects'} element={<Projects/>}/>
+                <Route path={'/projects'} element={<Projects windowWidth={props.windowWidth}/>}/>
                 <Route path={'/contacts'} element={<Contacts/>}/>
             </Routes>
         </div>

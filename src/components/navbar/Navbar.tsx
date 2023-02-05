@@ -10,33 +10,26 @@ type NavbarPropsType = {
     isMenuOpen: boolean
     changeMenuStatus: (e: boolean) => void
     menuBtnPressed: (e: boolean) => void
+    windowWidth: number
 }
 
 export const Navbar = (props: NavbarPropsType) => {
 
     //Open and close menu for mobile and desktop version auto
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
     useEffect(() => {
-        const handleWindowResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-        window.addEventListener('resize', handleWindowResize);
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        };
-    });
-    useEffect(() => {
-        if (windowWidth < 1300) {
+
+        if (props.windowWidth < 1300) {
             props.changeMenuStatus(false)
             props.menuBtnPressed(false)
         }
-    }, [windowWidth])
-    if (windowWidth > 1300) props.changeMenuStatus(true)
+    }, [props.windowWidth])
+    if (props.windowWidth > 1300) props.changeMenuStatus(true)
 
 
     //Close menu after click on menu
     const navLinkClickHandler = () => {
-        if (windowWidth < 1300) {
+        if (props.windowWidth < 1300) {
             props.changeMenuStatus(false)
             props.menuBtnPressed(false)
         }

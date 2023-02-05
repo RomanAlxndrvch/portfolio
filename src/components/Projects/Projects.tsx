@@ -5,7 +5,11 @@ import todoListPicture from './../../assets/images/TodoList.jpg'
 import socialNetworkPicture from './../../assets/images/SocalNetwork.png'
 import myProject from './../../assets/images/MyProject2.png'
 
-export const Projects = () => {
+type ProjectsPropsType = {
+    windowWidth: number
+}
+
+export const Projects = (props: ProjectsPropsType) => {
     const projectInfo = [
         {
             url: ' ',
@@ -36,18 +40,26 @@ export const Projects = () => {
             <div className={classes.mainContainer}>
                 <h6 className={classes.h6}>Creative Portfolio</h6>
                 <div className={classes.cartContainer}>
-                    {projectInfo.map((el, index) => <div className={classes.projectCart}><ProjectCart key={index}
-                                                                                                      url={el.url}
-                                                                                                      gitHubLink={el.gitHubLink}
-                                                                                                      picture={el.picture}/>
-                        <span style={{
-                            height: 'min-content',
-                            width: '32%',
-                            order: index % 2 === 0 ? '2' : '0'
-                        }}><div className={classes.projectName}>{el.name}</div>
-                            {el.text}</span>
+                    {projectInfo.map((el, index) => {
 
-                    </div>)}
+                        const order = () => {
+                            if (props.windowWidth < 850) return '0'
+                            else return index % 2 === 0 ? '2' : '0'
+                        }
+
+                        return <div className={classes.projectCart}><ProjectCart key={index}
+                                                                                 url={el.url}
+                                                                                 gitHubLink={el.gitHubLink}
+                                                                                 picture={el.picture}
+                                                                                 windowWidth={props.windowWidth}
+                        />
+                            <span className={classes.cardSpanText} style={{
+                                order: order()
+                            }}><div className={classes.projectName}>{el.name}</div>
+                                {el.text}</span>
+
+                        </div>
+                    })}
                 </div>
             </div>
         </section>
