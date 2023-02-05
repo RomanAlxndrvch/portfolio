@@ -44,7 +44,7 @@
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
 
     .projectCardContainer {
         width: 600px;
@@ -59,4 +59,18 @@
         transition: all 0.5s;
     }
 
+}
+
+
+@media only screen and (max-width: 630px) {
+    .projectCardContainer {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .projectCardContainer {
+        width: 250px;
+        height: 150px;
+    }
 }

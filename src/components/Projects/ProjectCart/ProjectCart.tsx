@@ -27,7 +27,7 @@ export const ProjectCart = (props: projectCartPropsType) => {
     }
 
     useEffect(() => {
-        if (props.windowWidth < 800) setOnHover(true)
+        if (props.windowWidth < 850) setOnHover(true)
         else setOnHover(false)
     }, [props.windowWidth])
 

@@ -76,17 +76,25 @@ table tbody tr td:nth-child(2):before {
     }
 
     .infoContainer {
-        width: 800px;
+        width: 650px;
         gap: 30px;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     .aboutContainer {
         height: auto;
         margin-bottom: 10px;
     }
+
+    .aboutMe {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 850px) {
     .img {
         width: 600px;
     }
@@ -100,9 +108,31 @@ table tbody tr td:nth-child(2):before {
     }
 
     .aboutMe {
-        width: 60%;
+        width: 100%;
         text-align: center;
     }
 
 
+}
+
+@media only screen and (max-width: 630px) {
+    .img {
+        width: 320px;
+    }
+
+    .infoContainer {
+        width: 320px;
+    }
+
+    .shortInfo {
+        font-size: 12px;
+    }
+
+    .infoName {
+        font-size: 12px;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
 }

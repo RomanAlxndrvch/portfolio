@@ -92,10 +92,55 @@
     }
 
     .mainContainer {
-        width: 700px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
     }
 
     .cardSpanText {
-        width: 500px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h6 {
+        align-self: center;
+        margin-bottom: 50px;
+    }
+
+    .projectName {
+        width: 250px;
+        align-self: center;
+    }
+
+    .projectContainer {
+
+        width: 100vw;
+
+    }
+
+}
+
+
+@media only screen and (max-width: 630px) {
+    .mainContainer {
+        width: 200px;
+    }
+
+    .projectContainer {
+
+        width: 100vw;
+
+    }
+
+    .cardSpanText {
+        width: 450px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .cardSpanText {
+        width: 350px;
     }
 }

@@ -107,3 +107,36 @@
     }
 }
 
+@media only screen and (max-width: 630px) {
+    .navbar {
+        width: 250px;
+    }
+
+    .nav {
+        align-items: center;
+    }
+
+    .navTopWord {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .navbar {
+        width: 200px;
+    }
+
+    .nav {
+        align-items: center;
+    }
+
+    .navTopWord {
+        font-size: 15px;
+        margin-left: 30px;
+    }
+
+    .createInfo {
+        width: 103px;
+    }
+}
